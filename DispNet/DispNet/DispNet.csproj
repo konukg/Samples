@@ -1,0 +1,742 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E73F51F5-71E1-4FC2-A962-02F9FC812DCA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DispNet</RootNamespace>
+    <AssemblyName>DispNet</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <ApplicationIcon>1.ICO</ApplicationIcon>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>5.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRules>
+    </CodeAnalysisRules>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>Migrated rules for DispNet.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="C1.C1Preview.2, Version=2.0.20071.41114, Culture=neutral, PublicKeyToken=594a0605db190bb9" />
+    <Reference Include="C1.Win.C1Command.2, Version=2.0.20073.19306, Culture=neutral, PublicKeyToken=e808566f358766d8, processorArchitecture=MSIL" />
+    <Reference Include="C1.Win.C1FlexGrid.2, Version=2.6.20071.324, Culture=neutral, PublicKeyToken=79882d576c6336da, processorArchitecture=MSIL" />
+    <Reference Include="C1.Win.C1Input.2, Version=2.0.20073.33104, Culture=neutral, PublicKeyToken=7e7ff60f0c214f9a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\C1.Win.C1Input.2.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Win.C1List.2, Version=2.1.20071.117, Culture=neutral, PublicKeyToken=6b24f8f981dbd7bc, processorArchitecture=MSIL" />
+    <Reference Include="C1.Win.C1Preview.2, Version=2.0.20071.41114, Culture=neutral, PublicKeyToken=41780e2fc605e636, processorArchitecture=MSIL" />
+    <Reference Include="C1.Win.C1Report.2, Version=2.5.20071.231, Culture=neutral, PublicKeyToken=79882d576c6336da, processorArchitecture=MSIL" />
+    <Reference Include="C1.Win.C1Ribbon.2, Version=2.0.20073.72, Culture=neutral, PublicKeyToken=79882d576c6336da, processorArchitecture=MSIL" />
+    <Reference Include="C1.Win.C1Schedule.2, Version=2.0.20071.23, Culture=neutral, PublicKeyToken=79882d576c6336da, processorArchitecture=MSIL" />
+    <Reference Include="C1.Win.C1Sizer.2, Version=2.1.20073.20, Culture=neutral, PublicKeyToken=79882d576c6336da, processorArchitecture=MSIL" />
+    <Reference Include="C1.Win.C1SuperTooltip.2, Version=2.0.20073.44, Culture=neutral, PublicKeyToken=79882d576c6336da, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CellNote.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CellNoteManager.cs" />
+    <Compile Include="Definitions.cs" />
+    <Compile Include="FrmAddBort.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAddBort.Designer.cs">
+      <DependentUpon>FrmAddBort.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBortDrvObl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBortDrvObl.Designer.cs">
+      <DependentUpon>FrmBortDrvObl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBortDrvUkg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBortDrvUkg.Designer.cs">
+      <DependentUpon>FrmBortDrvUkg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmChsCatDrv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmChsCatDrv.Designer.cs">
+      <DependentUpon>FrmChsCatDrv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDateRpl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDateRpl.Designer.cs">
+      <DependentUpon>FrmDateRpl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDisloc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDisloc.Designer.cs">
+      <DependentUpon>FrmDisloc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDispFire.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDispFire.Designer.cs">
+      <DependentUpon>FrmDispFire.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDispObl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDispObl.Designer.cs">
+      <DependentUpon>FrmDispObl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDispUkg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDispUkg.Designer.cs">
+      <DependentUpon>FrmDispUkg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDispUkgDrv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDispUkgDrv.Designer.cs">
+      <DependentUpon>FrmDispUkgDrv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmFireObl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmFireObl.Designer.cs">
+      <DependentUpon>FrmFireObl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmHomeData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmHomeData.Designer.cs">
+      <DependentUpon>FrmHomeData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmInputSmena.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmInputSmena.Designer.cs">
+      <DependentUpon>FrmInputSmena.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMain.Designer.cs">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMapUkg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMapUkg.Designer.cs">
+      <DependentUpon>FrmMapUkg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMapUkgPmt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMapUkgPmt.Designer.cs">
+      <DependentUpon>FrmMapUkgPmt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMenDrvUkg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMenDrvUkg.Designer.cs">
+      <DependentUpon>FrmMenDrvUkg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMonAlert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMonAlert.Designer.cs">
+      <DependentUpon>FrmMonAlert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMonDisp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMonDisp.Designer.cs">
+      <DependentUpon>FrmMonDisp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMsgService.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMsgService.Designer.cs">
+      <DependentUpon>FrmMsgService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmObjFind.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmObjFind.Designer.cs">
+      <DependentUpon>FrmObjFind.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmObjMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmObjMain.Designer.cs">
+      <DependentUpon>FrmObjMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmObjUkg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmObjUkg.Designer.cs">
+      <DependentUpon>FrmObjUkg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmObjUkgData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmObjUkgData.Designer.cs">
+      <DependentUpon>FrmObjUkgData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPermit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPermit.Designer.cs">
+      <DependentUpon>FrmPermit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmReport.Designer.cs">
+      <DependentUpon>FrmReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmReportInfoDrv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmReportInfoDrv.Designer.cs">
+      <DependentUpon>FrmReportInfoDrv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmReportMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmReportMain.Designer.cs">
+      <DependentUpon>FrmReportMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmReportPrint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmReportPrint.Designer.cs">
+      <DependentUpon>FrmReportPrint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmReportPrintArch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmReportPrintArch.Designer.cs">
+      <DependentUpon>FrmReportPrintArch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSdjvName.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSdjvName.Designer.cs">
+      <DependentUpon>FrmSdjvName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmStaffNote.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmStaffNote.Designer.cs">
+      <DependentUpon>FrmStaffNote.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmStreet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmStreet.Designer.cs">
+      <DependentUpon>FrmStreet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStreetDiv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStreetDiv.Designer.cs">
+      <DependentUpon>frmStreetDiv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTechNoUnit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTechNoUnit.Designer.cs">
+      <DependentUpon>FrmTechNoUnit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTechUnit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTechUnit.Designer.cs">
+      <DependentUpon>FrmTechUnit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmUnitNote.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmUnitNote.Designer.cs">
+      <DependentUpon>FrmUnitNote.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmUnitNoteArch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmUnitNoteArch.Designer.cs">
+      <DependentUpon>FrmUnitNoteArch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmWater.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmWater.Designer.cs">
+      <DependentUpon>FrmWater.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pageTabChronology.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="pageTabChronology.Designer.cs">
+      <DependentUpon>pageTabChronology.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pageTabChronologyObl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="pageTabChronologyObl.Designer.cs">
+      <DependentUpon>pageTabChronologyObl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pageTabDispOblBort.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="pageTabDispOblBort.Designer.cs">
+      <DependentUpon>pageTabDispOblBort.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pageTabDispUkgBort.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="pageTabDispUkgBort.Designer.cs">
+      <DependentUpon>pageTabDispUkgBort.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pageTabFireAsr.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="pageTabFireAsr.Designer.cs">
+      <DependentUpon>pageTabFireAsr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pageTabFireAsrObl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="pageTabFireAsrObl.Designer.cs">
+      <DependentUpon>pageTabFireAsrObl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pageTabFireData.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="pageTabFireData.Designer.cs">
+      <DependentUpon>pageTabFireData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pageTabFireDataObl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="pageTabFireDataObl.Designer.cs">
+      <DependentUpon>pageTabFireDataObl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pageTabFireDoc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="pageTabFireDoc.Designer.cs">
+      <DependentUpon>pageTabFireDoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pageTabFireDocObl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="pageTabFireDocObl.Designer.cs">
+      <DependentUpon>pageTabFireDocObl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pageTabFireObj.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="pageTabFireObj.Designer.cs">
+      <DependentUpon>pageTabFireObj.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pageTabFireObjObl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="pageTabFireObjObl.Designer.cs">
+      <DependentUpon>pageTabFireObjObl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="C1LocalizedResources\C1.Win.C1Preview.2.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CellNote.resx">
+      <DependentUpon>CellNote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAddBort.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmAddBort.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBortDrvObl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmBortDrvObl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBortDrvUkg.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmBortDrvUkg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmChsCatDrv.resx">
+      <DependentUpon>FrmChsCatDrv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDateRpl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmDateRpl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDisloc.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmDisloc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDispFire.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmDispFire.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDispObl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmDispObl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDispUkg.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmDispUkg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDispUkgDrv.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmDispUkgDrv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmFireObl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmFireObl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmHomeData.resx">
+      <DependentUpon>FrmHomeData.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmInputSmena.resx">
+      <DependentUpon>FrmInputSmena.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMain.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMapUkg.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmMapUkg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMapUkgPmt.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmMapUkgPmt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMenDrvUkg.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmMenDrvUkg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMonAlert.resx">
+      <DependentUpon>FrmMonAlert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMonDisp.resx">
+      <DependentUpon>FrmMonDisp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMsgService.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmMsgService.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmObjFind.resx">
+      <DependentUpon>FrmObjFind.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmObjMain.resx">
+      <DependentUpon>FrmObjMain.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmObjUkg.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmObjUkg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmObjUkgData.resx">
+      <DependentUpon>FrmObjUkgData.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPermit.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmPermit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmReport.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmReportInfoDrv.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmReportInfoDrv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmReportMain.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmReportMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmReportPrint.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmReportPrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmReportPrintArch.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmReportPrintArch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSdjvName.resx">
+      <DependentUpon>FrmSdjvName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmStaffNote.resx">
+      <DependentUpon>FrmStaffNote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmStreet.resx">
+      <DependentUpon>FrmStreet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStreetDiv.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmStreetDiv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTechNoUnit.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmTechNoUnit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTechUnit.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmTechUnit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmUnitNote.resx">
+      <DependentUpon>FrmUnitNote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmUnitNoteArch.resx">
+      <DependentUpon>FrmUnitNoteArch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmWater.resx">
+      <DependentUpon>FrmWater.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pageTabChronology.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>pageTabChronology.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pageTabChronologyObl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>pageTabChronologyObl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pageTabDispOblBort.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>pageTabDispOblBort.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pageTabDispUkgBort.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>pageTabDispUkgBort.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pageTabFireAsr.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>pageTabFireAsr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pageTabFireAsrObl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>pageTabFireAsrObl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pageTabFireData.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>pageTabFireData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pageTabFireDataObl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>pageTabFireDataObl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pageTabFireDoc.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>pageTabFireDoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pageTabFireDocObl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>pageTabFireDocObl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pageTabFireObj.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>pageTabFireObj.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pageTabFireObjObl.resx">
+      <DependentUpon>pageTabFireObjObl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Migrated rules for DispNet.ruleset" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="XmlFilter.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxMapXLib">
+      <Guid>{E760686B-BC9E-4802-9ECF-175FDF4062CE}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="AxXtremeCommandBars">
+      <Guid>{555E8FCC-830E-45CC-AF00-A012D5AE7451}</Guid>
+      <VersionMajor>10</VersionMajor>
+      <VersionMinor>1</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="AxXtremeSuiteControls">
+      <Guid>{A8E5842E-102B-4289-9D57-3B3F5B5E15D3}</Guid>
+      <VersionMajor>10</VersionMajor>
+      <VersionMinor>1</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="MapXLib">
+      <Guid>{E760686B-BC9E-4802-9ECF-175FDF4062CE}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="XtremeCommandBars">
+      <Guid>{555E8FCC-830E-45CC-AF00-A012D5AE7451}</Guid>
+      <VersionMajor>10</VersionMajor>
+      <VersionMinor>1</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="XtremeSuiteControls">
+      <Guid>{A8E5842E-102B-4289-9D57-3B3F5B5E15D3}</Guid>
+      <VersionMajor>10</VersionMajor>
+      <VersionMinor>1</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pan.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FIRE1-32.BMP" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CAR2.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ico2644.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ico1309_16.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CAR2_16.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FIRE1-16.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="1.ICO" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
